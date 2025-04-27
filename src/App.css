@@ -15,15 +15,14 @@ body {
 }
 
 .start-screen {
-  padding: 40px;
+  padding: clamp(20px, 5vw, 40px);
   animation: fadeIn 1s ease;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  width: 90%;
-  max-width: 500px;
-  margin: 20px;
+  width: min(90%, 500px);
+  margin: 10px;
 }
 
 .title {
@@ -51,8 +50,8 @@ body {
 .selectors label {
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  font-size: 1.2rem;
-  margin-bottom: 8px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: clamp(5px, 2vw, 8px);
   display: block;
   letter-spacing: 0.5px;
 }
@@ -70,10 +69,11 @@ body {
 
 .name-input {
   width: 100%;
-  padding: 12px 15px;
-  font-size: 1.1rem;
-  margin-top: 5px;
+  padding: clamp(10px, 2.5vw, 15px);
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  margin-top: clamp(5px, 1.5vw, 8px);
   transition: all 0.3s ease;
+  max-width: 300px;
 }
 
 .name-input:focus {
@@ -98,15 +98,16 @@ body {
 }
 
 select {
-  padding: 12px 35px 12px 15px;
-  font-size: 1.2rem;
-  border-radius: 12px;
+  padding: clamp(10px, 2.5vw, 15px) clamp(15px, 3vw, 35px);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  border-radius: clamp(8px, 2vw, 12px);
   border: 2px solid rgba(255, 255, 255, 0.6);
   background: rgba(0, 0, 0, 0.6);
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
-  min-width: 200px;
+  width: 100%;
+  max-width: 300px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   -webkit-appearance: none;
@@ -141,29 +142,30 @@ select option {
 .game-selectors {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: clamp(12px, 3vw, 20px);
+  margin-bottom: clamp(15px, 4vw, 25px);
   background: rgba(0, 0, 0, 0.4);
-  padding: 25px;
+  padding: clamp(15px, 4vw, 25px);
   border-radius: 15px;
-  width: 80%;
-  max-width: 400px;
+  width: min(90%, 400px);
+  margin-inline: auto;
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .start-button, .hint-button {
-  padding: 12px 24px;
-  font-size: 1.2em;
-  border-radius: 25px;
+  padding: clamp(10px, 2.5vw, 15px) clamp(20px, 5vw, 30px);
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   border: none;
-  background: linear-gradient(45deg, #4CAF50, #45a049);
+  border-radius: clamp(20px, 5vw, 30px);
+  background: linear-gradient(45deg, #2196F3, #00BCD4);
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin: clamp(8px, 2vw, 15px);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: min(90%, 200px);
 }
 
 .start-button:hover, .hint-button:hover {
