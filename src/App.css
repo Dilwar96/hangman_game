@@ -153,12 +153,13 @@ select option {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.start-button, .hint-button {
+.start-button,
+.hint-button {
   padding: clamp(10px, 2.5vw, 15px) clamp(20px, 5vw, 30px);
   font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   border: none;
   border-radius: clamp(20px, 5vw, 30px);
-  background: linear-gradient(45deg, #2196F3, #00BCD4);
+  background: linear-gradient(45deg, #2196f3, #00bcd4);
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -168,13 +169,15 @@ select option {
   width: min(90%, 200px);
 }
 
-.start-button:hover, .hint-button:hover {
+.start-button:hover,
+.hint-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   animation: glow 1.5s infinite;
 }
 
-.start-button:active, .hint-button:active {
+.start-button:active,
+.hint-button:active {
   transform: translateY(-1px);
 }
 
@@ -266,18 +269,34 @@ select option {
 }
 
 @keyframes drawLine {
-  from { transform: scale(0, 1); }
-  to { transform: scale(1, 1); }
+  from {
+    transform: scale(0, 1);
+  }
+  to {
+    transform: scale(1, 1);
+  }
 }
 
 @keyframes swingIn {
-  0% { transform: rotate(-45deg); opacity: 0; }
-  100% { transform: rotate(0deg); opacity: 1; }
+  0% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInPart {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .hangman-container {
@@ -291,12 +310,13 @@ select option {
 
 .gallows {
   position: absolute;
+  bottom: 10px;
   left: 50%;
   transform-origin: top;
   transform: translateX(-50%);
   width: 12px;
   height: 300px;
-  background: linear-gradient(to bottom, #8B4513, #654321);
+  background: linear-gradient(to bottom, #8b4513, #654321);
   border-radius: 6px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   animation: drawLine 0.5s ease-out;
@@ -309,7 +329,7 @@ select option {
   transform: translateX(-50%);
   width: 200px;
   height: 15px;
-  background: linear-gradient(to right, #8B4513, #654321);
+  background: linear-gradient(to right, #8b4513, #654321);
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   animation: drawLine 0.5s ease-out;
@@ -317,11 +337,11 @@ select option {
 
 .top {
   position: absolute;
-  top: 0;
-  left: 50%;
+  top: 85px;
+  left: 60%;
   width: 150px;
   height: 12px;
-  background: linear-gradient(to right, #8B4513, #654321);
+  background: linear-gradient(to right, #8b4513, #654321);
   border-radius: 6px;
   transform: translateX(-25%);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -330,11 +350,11 @@ select option {
 
 .rope {
   position: absolute;
-  top: 0;
+  top: 85px;
   right: 25px;
   width: 4px;
   height: 50px;
-  background: #A0522D;
+  background: #a0522d;
   animation: swingIn 0.5s ease-out;
 }
 
@@ -350,7 +370,7 @@ select option {
 }
 
 .head {
-  top: 50px;
+  top: 135px;
   right: 10px;
   width: 45px;
   height: 45px;
@@ -358,12 +378,12 @@ select option {
   border-radius: 50%;
   background: linear-gradient(135deg, #f8f8f8, #e0e0e0);
   box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5),
-              inset -2px -2px 5px rgba(0, 0, 0, 0.1);
+    inset -2px -2px 5px rgba(0, 0, 0, 0.1);
   animation: fadeInPart 0.3s ease-out;
 }
 
 .body {
-  top: 100px;
+  top: 185px;
   right: 30px;
   width: 8px;
   height: 80px;
@@ -374,7 +394,7 @@ select option {
 }
 
 .left-arm {
-  top: 110px;
+  top: 195px;
   right: 38px;
   width: 50px;
   height: 8px;
@@ -387,7 +407,7 @@ select option {
 }
 
 .right-arm {
-  top: 110px;
+  top: 195px;
   right: -20px;
   width: 50px;
   height: 8px;
@@ -400,7 +420,7 @@ select option {
 }
 
 .left-leg {
-  top: 178px;
+  top: 255px;
   right: -10px;
   width: 50px;
   height: 8px;
@@ -413,8 +433,8 @@ select option {
 }
 
 .right-leg {
-  top: 178px;
-  right: 28px;
+  top: 255px;
+  right: 30px;
   width: 50px;
   height: 8px;
   background: linear-gradient(to left, #333, #444);
@@ -503,7 +523,10 @@ select option {
   margin: 20px 0;
 }
 
-.timer, .score, .high-score, .streak {
+.timer,
+.score,
+.high-score,
+.streak {
   animation: pop 0.5s ease-out;
   padding: 8px 15px;
   border-radius: 20px;
@@ -540,7 +563,8 @@ select option {
 }
 
 @keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0) rotate(0deg);
   }
   25% {
